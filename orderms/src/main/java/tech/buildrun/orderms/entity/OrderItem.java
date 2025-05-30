@@ -16,6 +16,9 @@ public class OrderItem {
     public OrderItem() {
     }
 
+    public OrderItem(String produto, Integer quantidade, BigDecimal preco) {
+    }
+
     public BigDecimal getPrice() {
         return price;
     }
