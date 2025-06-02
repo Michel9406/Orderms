@@ -51,11 +51,12 @@ Este projeto faz parte de uma jornada de aprendizado em arquitetura de sistemas,
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/
+git clone[ https://github.com/
+](https://github.com/Michel9406/Orderms/tree/main)
 
 Navegue até a pasta do projeto e suba os containers com Docker Compose:
 
-cd nome-do-repositorio
+cd nome-do-repositorio orderms
 docker-compose up --build
 Acesse a API via http://localhost:8080
 
