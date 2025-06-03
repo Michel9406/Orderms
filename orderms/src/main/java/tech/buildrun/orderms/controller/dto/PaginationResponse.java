@@ -1,7 +1,18 @@
 package tech.buildrun.orderms.controller.dto;
 
-public record paginationResponse(Integer page,
+import org.springframework.data.domain.Page;
+
+public record PaginationResponse(Integer page,
                                  Integer pageSize,
-                                 Integer totalElements,
+                                 Long totalElements,
                                  Integer totalPages) {
+
+    public static PaginationResponse fromPage(Page<?> page) {
+        return new PaginationResponse(
+                page.getNumber(),
+                page.getSize(),
+                page.getTotalElements(),
+                page.getTotalPages()
+        );
+    }
 }
