@@ -31,12 +31,13 @@ public class OrderController {
 
         var pageResponse = orderService.findAllByCustomerId(customerId, PageRequest.of(page, pageSize));
 
+        var totalOnOrders = orderService.findTotalOnOrdersByCustomerId(customerId);
 
 
         return ResponseEntity.ok(new ApiResponse<>(
-                Map.of(),
+                Map.of("totalOnOrders" , totalOnOrders),
                 pageResponse.getContent(),
                 PaginationResponse.fromPage(pageResponse)
-        ));
+         ));
     }
 }
